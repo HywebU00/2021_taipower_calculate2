@@ -13,15 +13,30 @@ $(function() {
         lazyLoad: 'ondemand',
         ease: 'ease'
     });
-    // 廣告輪播
-    $('.adSlider').slick({
+    $('.eli5_slider ul').on('init reInit afterChange', function(event, slick, currentSlide) {
+        var i = (currentSlide ? currentSlide : 0) + 1;
+        if (slick.slideCount<10) {
+            if (i<10) {
+                $('.eli5_controls').html( '<span>0' + i + '</span> / 0' + slick.slideCount);
+            } else {
+                $('.eli5_controls').html( '<span>' + i + '</span> / 0' + slick.slideCount);
+            }
+        } else {
+            if (i<10) {
+                $('.eli5_controls').html( '<span>0' + i + '</span> / ' + slick.slideCount);
+            } else {
+                $('.eli5_controls').html( '<span>' + i + '</span> / ' + slick.slideCount);
+            }
+        }
+    });
+    $('.eli5_slider ul').slick({
         mobileFirst: true,
         dots: false,
         infinite: true,
         speed: 300,
-        slidesToShow: 2,
+        slidesToShow: 1,
         slidesToScroll: 1,
-        autoplay: true,
+        // autoplay: true,
         arrow: true,
         lazyLoaded: true,
         lazyLoad: 'ondemand',
@@ -29,26 +44,86 @@ $(function() {
         responsive: [{
             breakpoint: 1200,
             settings: {
-                slidesToShow: 5,
+                slidesToShow: 3,
                 slidesToScroll: 1,
                 arrows: true
             }
         },{
             breakpoint: 768,
             settings: {
-                slidesToShow: 4,
+                slidesToShow: 3,
                 slidesToScroll: 1,
                 arrows: true
             }
         },{
-            breakpoint: 575,
+            breakpoint: 640,
             settings: {
-                slidesToShow: 3,
+                slidesToShow: 2,
                 slidesToScroll: 1,
                 arrows: true
             }
         }]
     });
+
+    $('.case_slider ul').on('init reInit afterChange', function(event, slick, currentSlide) {
+        var i = (currentSlide ? currentSlide : 0) + 1;
+        if (slick.slideCount<10) {
+            if (i<10) {
+                $('.case_controls').html( '<span>0' + i + '</span> / 0' + slick.slideCount);
+            } else {
+                $('.case_controls').html( '<span>' + i + '</span> / 0' + slick.slideCount);
+            }
+        } else {
+            if (i<10) {
+                $('.case_controls').html( '<span>0' + i + '</span> / ' + slick.slideCount);
+            } else {
+                $('.case_controls').html( '<span>' + i + '</span> / ' + slick.slideCount);
+            }
+        }
+    });
+    $('.case_slider ul').slick({
+        mobileFirst: true,
+        dots: false,
+        infinite: true,
+        speed: 300,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        // autoplay: true,
+        centerMode: true,
+        centerPadding: '0px',
+        arrow: true,
+        lazyLoaded: true,
+        lazyLoad: 'ondemand',
+        ease: 'ease',
+        responsive: [{
+            breakpoint: 1000,
+            settings: {
+                centerMode: true,
+                centerPadding: '0px',
+                slidesToShow: 4,
+                slidesToScroll: 1,
+                arrows: true
+            }
+        },{
+            breakpoint: 768,
+            settings: {
+                centerMode: true,
+                centerPadding: '0px',
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                arrows: true
+            }
+        },{
+            breakpoint: 640,
+            settings: {
+                centerMode: true,
+                slidesToShow: 2,
+                slidesToScroll: 1,
+                arrows: true
+            }
+        }]
+    });
+
     //燈箱slick+lightBox組合
     $('.cp_slider').slick({
         dots: true,
@@ -97,7 +172,7 @@ $(function() {
         lazy: true
     });
     // 
-$('.cppic_slider').slick({
+    $('.cppic_slider').slick({
         dots: true,
         infinite: false,
         speed: 500,
@@ -138,11 +213,11 @@ $('.cppic_slider').slick({
     });
 
      // cp_photo
-    $('.Slider-for').on('init reInit afterChange', function(event, slick, currentSlide) {
+     $('.Slider-for').on('init reInit afterChange', function(event, slick, currentSlide) {
         var i = (currentSlide ? currentSlide : 0) + 1;
         $('.controls').html(i + '/' + slick.slideCount);
     });
-    $('.Slider-for').slick({
+     $('.Slider-for').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
         arrows: false,
@@ -153,7 +228,7 @@ $('.cppic_slider').slick({
         asNavFor: '.Slider-nav',
         infinite: true
     });
-    $('.Slider-nav').slick({
+     $('.Slider-nav').slick({
         slidesToShow: 2,
         slidesToScroll: 1,
         asNavFor: '.Slider-for',
@@ -163,5 +238,5 @@ $('.cppic_slider').slick({
         focusOnSelect: true,
         infinite: true
     });
-    
-});
+     
+ });

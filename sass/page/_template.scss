@@ -5,6 +5,7 @@ html {
   scroll-behavior: smooth;
 }
 body {
+  background: #f6f2e6;
   &.noscroll {
     position: static !important;
     width: 100%;
@@ -17,10 +18,13 @@ body {
 }
 // 最外圍預設為100%
 .wrapper {
-  width: 100%;
   margin: 0px auto;
+  max-width: $container-max;
+  background: url(../images/bg.jpg) repeat-y center 0;
+  @include screen('tablet') {
+    width: 100%;
+  }
   @include screen('mobile') {
-    background: #FFF;
     overflow: hidden;
     overflow-y: auto;
   }
@@ -29,50 +33,432 @@ body {
 .container {
   padding: 0;
   margin: 0 auto;
-    max-width: $container-max; //請看_variable.scss
+  max-width: $container-max; 
+}
+.main {
+  position: relative;
+  margin: 0 auto;
+  padding:  0;
+  max-width: $container-max; 
+  h2 {
+    line-height: 1.25em;
   }
-  .main {
-    position: relative;
-    margin: 0 auto;
-    padding:  1em 0 0 0;
-    // 可先設定一個中央區塊最大寬，限制accesskey對齊
-
-    h2 {
-      line-height: 1.25em;
+}
+h1.title, h2.title {
+  line-height: 1.25em;
+  margin: .4em 0;
+}
+.innerpage{
+  background: url(../images/header_bg.png) no-repeat center -100px;
+  position: relative;
+  &:before{
+    content: "";
+    width: 100%;
+    height: 100px;
+    background: url(../images/header_bg.png) no-repeat center 0;
+    position: absolute;
+    top: -100px;
+    left: 0;
+  }
+  >.container {
+    @include gutter(160px);
+    padding-top: 260px;
+    @include screen('tablet') {
+      @include gutter(60px);
     }
   }
-////////////////////////////////////////////////////////////
-// 為了與首頁區隔，請在內頁加上innerpage ClassName
-.innerpage {
-
-  >.container {
-        @include gutter(); //gutter 代表左右要留白
-        display: flex;
-        
+  .inner_bg{
+    h2.pageTitle{
+      position: absolute;
+      left:64px;
+      top: 0;
+      text-align: right;
+      margin: 0;
+      font-size: 0;
+      @include screen('mobile') {
+        left: 30px;
       }
-      .left_block {
-        flex:0 0 260px;
-        max-width: 260px;
-        // float: left;
-        // width: 260px;
-        margin-right: 40px;
+      span{
+        width: 310px;
+        height: 58px;
+        margin-right: 8px;
         @include screen('tablet') {
-          display: none;
+          display: block;
+          margin-bottom: 8px;
+        }
+        img{
+          width: 310px;
+          height: 58px;
+        }
+        &:nth-child(2){
+          width: 132px;
+          height: 35px;
+          img{
+            width: 132px;
+            height: 35px;
+          }
+        }
+
+      }
+    }
+    .circle{
+      position: absolute;
+      top: 0;
+      right: 28%;
+      @include screen('tablet') {
+        right: 6%;
+        top: 0;
+      }
+      @include screen('mobile') {
+        transform: scale(.7);
+        top: 40px;
+      }
+    }
+  }
+  h2.title{
+    color: #2a2a2a;
+    font-size: 1.625em;
+    padding-bottom: 21px;
+    position: relative;
+    text-align: center;
+    margin: 0 0 1em 0 ;
+    letter-spacing: 2px;
+    &:before{
+      content: "";
+      width: 40px;
+      height: 2px;
+      display: block;
+      background: #7c994e;
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      margin-left: -20px;
+      z-index: 99;
+    }
+  }
+  // .left_block {
+  //   flex:0 0 260px;
+  //   max-width: 260px;
+  //   margin-right: 40px;
+  //   @include screen('tablet') {
+  //     display: none;
+  //   }
+  // }
+  .center_block {
+    flex:auto;
+    max-width: 100%;
+    overflow: hidden;
+  }
+  // &.small_size {
+  //   font-size: .938em;
+  // }
+  // &.large_size {
+  //   font-size: 1.125em;
+  // }
+}
+.hidden{
+  display: none;
+}
+.calculate{
+  .count_category{
+    padding-bottom: 30px;
+    margin-bottom: 10px;
+    text-align: center;
+    position: relative;
+    @include screen('tablet') {
+      margin-bottom: 0;
+    }
+    &:before{
+      content: "";
+      width: 100%;
+      height: 140px;
+      background: url(../images/category_bg.png) no-repeat center 0;
+      left: 0;
+      top: -48px;
+      display: block;
+      position: absolute;
+    }
+    ul{
+      @include li-reset;
+      position: relative;
+      overflow: hidden;
+      padding: 5px 60px;
+      @include screen('tablet') {
+        padding: 5px 0;
+      }
+      &:before,&:after{
+        content: "";
+        width: 100%;
+        height: 5px;
+        display: block;
+        position: absolute;
+        background: url(../images/tab_bg2.png) no-repeat center 0;
+        left: 0;
+      }
+      &:before{
+        top: 0;
+      }
+      &:after{
+        bottom: 0;
+      }
+      li{
+        float: left;
+        line-height: 3em;
+        width: 25%;
+        @include screen('mobile') {
+          width: 50%;
+        }
+        a{
+          display: block;
+          color: $color-word;
+          text-align: center;
+          font-weight: bold;
+          &.active{
+            background: url(../images/tab_bg.png) no-repeat center center;
+            background-size: 100% 100%;
+            color: #fff;
+            &:hover,&:focus{
+              color: $lightColor;
+            }
+          }
+          &:hover,&:focus{
+            color: $primaryColor;
+          }
         }
       }
-      .center_block {
-       flex:auto;
-       max-width: 100%;
-       overflow: hidden;
-     }
-     &.small_size {
-      font-size: .938em;
-    }
-    &.large_size {
-      font-size: 1.125em;
     }
   }
+  .count_info{
+    width: 860px;
+    height: 135px;
+    margin: 0 auto;
+    padding: 40px 70px; 
+    background: url(../images/text_bg.png) no-repeat center center;
+    background-size: 100% 100%;
+    @include screen('tablet') {
+      width: 100%;
+    }
+    @include screen('mobile') {
+      width: 100%;
+      padding: 30px;
+      height: auto;
+    }
+    p{
+      margin-top: 0;
+      color: #705944;
+    }
+  }
+  .count_block{
+    background: url(../images/tab_bg2.png) no-repeat center bottom;
+    padding: 24px 30px;
+    position: relative;
+    &:last-child{
+      background:none;
+    }
+    @include screen('mobile') {
+      padding: 24px 0;
+    }
+    .count_title{
+      line-height: 60px;
+      color: $primaryColor;
+      font-size: 1.25rem;
+      letter-spacing: 1px;
+      margin-top: 0;
+      span{
+        display: inline-block;
+        width: 67px;
+        height: 60px;
+        background: url(../images/number.png) no-repeat center center;
+        text-align: center;
+        color: #fff;
+        font-size: 2rem;
+        font-style: italic;
+        font-weight: normal;
+        margin-right: 8px;
+      }
+    }
+    .count_form{
+      padding: 0 60px;
+      @include screen('tablet') {
+        padding: 0;
+      }
+      .form_grid{
+        border-top: 0;
+        .form_grp {
+          border-bottom: 0;
+          margin: 0;
+        }
+      }
+      .form_title{
+        font-size: 1.125rem;
+        font-weight: bold;
+        max-width: 200px;
+        flex: 0 0 200px;
+        text-align: right;
+        padding-left: 10px;
+        padding-right: 10px;
+        line-height: 46px;
+        color: $color-word;
+        @include screen('mobile') {
+          margin: 0;
+          font-size: 1rem;
+        }
+        .necessary{
+          color: #f9920a;
+        }
+      }
+      .form_content {
+        padding-top: 3px;
+        max-width: calc(100% - 200px);
+        flex-basis: calc(100% - 200px);
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+      .text{
+        color: #6f6d6b;
+        margin-top: 25px;
+        font-size: .9375rem;
+        line-height: 180%;
+        padding-left: 210px;
+        @include screen('mobile') {
+          padding-left: 0;
+        }
+      }
+      input{
+        line-height: 30px;
+        border: 1px solid #e9ddbf;
+        margin: 0 0 .3em 0;
+      }
+      button{
+        line-height: 64px;
+        padding: 0 80px;
+        font-size: 1.125rem;
+      }
+      &.equation{
+        flex-wrap: nowrap;
+        padding: 0; 
+        label{
+          font-size: 1.125rem;
+          font-weight: bold;
+          margin-bottom: 0;
+          @include screen('mobile') {
+            margin-bottom: .3em;
+          }
+        }
+        input{
+          max-width: 80px;
+          margin-right: .3em;
+          margin-bottom: 0;
+          @include screen('mobile') {
+            margin-bottom: .3em;
+          }
+        }
+        span{
+          font-weight: bold;
+          color: #908f8b;
+          font-size: 1.5rem;
+          margin: 0 14px;
+          line-height: 46px;
+        }
+        .form_content{
+          width: 100%;
+          max-width: 100%;
+          justify-content: center;
+        }
+      }
+    }
+    .count_link{
+      position: absolute;
+      right: 0;
+      top: 36px;
+      text-align: right;
+      @include screen('mobile') {
+        position: relative;
+        right: auto;
+        top: auto;
+        text-align: center;
+        margin-bottom: 1em;
+      }
+      a{
+        border-radius: 3px;
+        line-height: 42px;
+        padding: 0 24px;
+        display: inline-block;
+        color: #fff;
+        margin: 0 4px;
+        
+        &.direction{
+          background:#2391e6;
+          &:hover,&:focus{
+            background:#edbd1f;
+          }
+        }
+        &.tool{
+          background: #0c69b1 url(../images/owl.png) no-repeat 8px center;
+          padding-left: 50px;
+          &:hover,&:focus{
+            background:#edbd1f url(../images/owl.png) no-repeat 8px center;
+          }
+        }
 
-  .hidden{
-    display: none;
+      }
+    }
+    .infographic{
+      display: flex;
+      flex-wrap:wrap;
+      justify-content: space-between;
+      text-align: center;
+      font-size: .9375rem;
+      font-weight: bold;
+      color: $color-word;
+      padding: 0 60px;
+      @include screen('tablet') {
+        padding: 0 30px;
+        justify-content:center;
+      }
+      @include screen('mobile') {
+        padding: 0;
+      }
+      .left{
+
+      }
+      .right{
+
+      }
+      .legend{
+        width: 100%;
+        text-align: center;
+        padding: 20px 0;
+        span{
+          position: relative;
+          margin:0 18px;
+          line-height: 18px;
+          @include screen('mobile') {
+            margin:0 6px;
+          }
+          &:before{
+            content: "";
+            width: 18px;
+            height: 18px;
+            display: inline-block;
+            margin-right: 14px;
+            border-radius: 50%;
+            vertical-align: middle;
+            @include screen('mobile') {
+              margin-right: 6px;
+            }
+          }
+        }
+        .rush:before{
+          background:#ca1643;
+        }
+        .half-rush:before{
+          background:#edbd1f;
+        }
+        .peak:before{
+          background:#56ac31;
+        }
+      }
+    }
   }
+}

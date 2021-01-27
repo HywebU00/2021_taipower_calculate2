@@ -1,15 +1,15 @@
 .breadcrumb {
-    border-bottom: 1px solid #EEE;
-    padding: .1em 0em .1em;
-    font-size: .813em;
     margin: 0px auto 5px;
+    background: url(../images/breadcrumb.png) no-repeat left center;
+    line-height: 40px;
+    padding-left: 30px;
     ul {
         @include li-reset;
         li {
             display: inline-block;
             margin: 0px .1em .1em 0px;
             &:before {
-                @extend %slash;
+                content: "> ";
             }
             &:first-child:before {
                 content: "";

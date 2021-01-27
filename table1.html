@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<style>
+		body{
+			padding: 0;
+			margin: 0;
+		}
+		table.price{
+			font-family:Arial, sans-serif;
+			font-size:14px;
+			border-collapse:collapse;
+			border-spacing:0;
+			background: #f8f4ea;
+			width: 520px;
+		}
+		table.price thead th{
+			font-weight:bold;
+			padding:10px 0;
+			word-break:normal;
+			text-align:center;
+			vertical-align:middle;
+			border:1px solid #837e6f;
+			letter-spacing: 5px;
+			border-top: 0;
+			border-left: 0;
+			white-space: nowrap;
+			background: #e9e2d1;
+		}
+		table.price thead th span{
+			font-size: 12px;
+			display: block;
+			font-weight: normal;
+			letter-spacing: 0;
+		}
+		table.price thead th:last-child{
+			border-right: 0;
+		}
+		table.price tbody th{
+			font-weight:normal;
+			padding:10px 0;
+			word-break:normal;
+			text-align:center;
+			vertical-align:middle;
+			border:1px solid #837e6f;
+			border-top: 0;
+			border-left: 0;
+			white-space: nowrap;
+			background: #d8cdb2;
+		}
+		table.price tbody th:last-child{
+			border-right: 0;
+		}
+		table.price td{
+			padding:10px 5px;
+			word-break:normal;
+			text-align:center;
+			border:1px solid #837e6f;
+			border-top: 0;
+			border-left: 0;
+		}
+		table.price td:last-child{
+			border-right: 0;
+		}
+		table.price .red{
+			background: #ce1c45;
+			color: #fff;
+		}
+		table.price .pink{
+			background: #fee5dd;
+		}
+		table.price .green{
+			background: #4da62c;
+			color: #fff;
+		}
+		table.price .lightgreen{
+			background: #dae9c9;
+		}
+		table.price .yellow{
+			background: #eeb612;
+			color: #fff;
+		}
+		table.price .lightyellow{
+			background: #f3e5a3;
+		}
+	</style>
+</head>
+<body>
+	<table class="price level2">
+		<thead>
+			<tr>
+				<th colspan="5">分類</th>
+				<th>夏月<span>（6/1~9/30）</span></th>
+				<th>非夏月<span>（夏月以外的時間）</span></th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<th>基本電費</th>
+				<th colspan="3">按戶計收</th>
+				<th>每戶<br>每月</th>
+				<th colspan="2">75.00</th>
+			</tr>
+			<tr>
+				<td rowspan="3">流動<br>電費</td>
+				<td rowspan="2">週一<br>～<br>週五</td>
+				<td class="red">尖峰<br>時間</td>
+				<td class="pink">07:30～22:30</td>
+				<td rowspan="2">每度</td>
+				<td class="pink">4.44</td>
+				<td class="pink">4.23</td>
+			</tr>
+			<tr>
+				<td class="green">離峰<br>時間</td>
+				<td class="lightgreen">00:00～07:30<br>22:30～24:00</td>
+				<td class="lightgreen">1.80</td>
+				<td class="lightgreen">1.73</td>
+			</tr>
+			<tr>
+				<td colspan="3">每月總度數超過2000度之部分</td>
+				<td>每度</td>
+				<td colspan="2">加0.96</td>
+			</tr>
+		</tbody>
+	</table>
+</body>
+</html>
