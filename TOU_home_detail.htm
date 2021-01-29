@@ -98,17 +98,14 @@
             <!-- category -->
             <div class="count_category">
               <ul>
-                <li><a href="#" class="active">家庭快速計算</a></li>
+                <li><a href="#">家庭快速計算</a></li>
                 <li><a href="#">商店快速計算</a></li>
-                <li><a href="#">家庭詳細計算</a></li>
+                <li><a href="#" class="active">家庭詳細計算</a></li>
                 <li><a href="#">商店詳細計算</a></li>
               </ul>
             </div>
-            <div class="count_info">
-              <p>因本公司時間電價尖峰、半尖峰及離峰時間之單價各不相同，需依據您的用電習慣，<br>以夏月及非夏月全月時間來評估填寫不同時間帶之用電比例，方能正確評估是否適用時間電價。</p>
-            </div>
             <div class="count_block">
-              <h3 class="count_title"><span>1</span>夏月 / 非夏月電費帳單</h3>
+              <h3 class="count_title"><span>1</span>輸入電號資訊及房子建坪</h3>
               <div class="count_form">
                 <form action="">
                   <div class="flex-form form_grid">
@@ -119,91 +116,68 @@
                       </div>
                     </div>
                     <div class="form_grp">
-                      <label for="password" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>夏月每月用電度數</label>
+                      <label for="password" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>房子坪數</label>
                       <div class="form_content">
-                        <input name="" type="text" placeholder="請輸入度數">
+                        <input name="" type="text" placeholder="1000"><span>坪</span>
                       </div>
-                    </div>
-                    <div class="form_grp">
-                      <label for="email" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>非夏月每月用電度數</label>
-                      <div class="form_content">
-                        <input name="" type="text" placeholder="請輸入度數">
-                      </div>
-                      <div class="text">
-                        24小時客服專線：1911（免付費，公共電話除外，通話時間限制 5分鐘）<br>
-                        若需要查詢電費帳單資訊，請上 電子帳單服務系統 查詢，或下載台灣電力APP。<br>
-                        電費帳單計費期間為2個月，請將帳單用電度數除以2，再填入以下空格。
-                      </div>
-                    </div>
-                    <div class="btn_grp form_inline">
-                      <button class="btn btn-submit">下一步</button>
                     </div>
                   </div>
                 </form>
               </div>
             </div>
             <div class="count_block">
-              <h3 class="count_title"><span>2</span>填寫夏月用電比例</h3>
-              <div class="count_link">
-                <a href="" class="direction">時段計價說明</a>
-                <a href="" class="tool">用電比例估算小工具</a>
-              </div>
-              <div class="infographic">
-                <div class="left">
-                  <div class="description">週一至週五</div>
-                  <img src="images/time1.png" alt="">
-                </div>
-                <div class="right">
-                  <div class="description">週六、週日及離峰日</div>
-                  <img src="images/time2.png" alt="">
-                </div>
-                <div class="legend"><span class="rush">尖峰時間</span><span class="half-rush">半尖峰時間</span><span class="peak">離峰時間</span></div>
-              </div>
-              <div class="count_form equation">
+              <h3 class="count_title"><span>2</span>週六待在家？</h3>
+              <div class="count_form">
                 <form action="">
                   <div class="flex-form form_grid">
                     <div class="form_grp">
-                      <div class="form_content form_inline">
-                        <div><label for="">尖峰比例</label> <input name="" type="text" placeholder=""> ％ </div>
-                        <span>+</span>
-                        <div><label for="">半尖峰比例</label> <input name="" type="text" placeholder=""> ％ </div>
-                        <span>+</span>
-                        <div><label for="">離峰比例</label> <input name="" type="text" placeholder=""> ％ </div>
-                        <span>= 100%</span>
+                      <label for="username" class="form_title">週六待在家？</label>
+                      <div class="form_content">
+                        <label>
+                          <input name="radioSample" type="radio" value="" class="b_yes" checked="">
+                        </label>
+                        <label>
+                          <input name="radioSample" type="radio" value="" class="b_no">
+                        </label>
                       </div>
                     </div>
-                    <div class="count_hint">* 以上3個比例合計應等於100%</div>
                   </div>
                 </form>
               </div>
             </div>
             <div class="count_block">
-              <h3 class="count_title"><span>3</span>填寫非夏月用電比例</h3>
-              <div class="infographic">
-                <div class="left">
-                  <div class="description">週一至週五</div>
-                  <img src="images/time3.png" alt="">
-                </div>
-                <div class="right">
-                  <div class="description">週六、週日及離峰日</div>
-                  <img src="images/time2.png" alt="">
-                </div>
-                <div class="legend"><span class="half-rush">半尖峰時間</span><span class="peak">離峰時間</span></div>
-              </div>
-              <div class="count_form equation">
+              <h3 class="count_title"><span>3</span>週日待在家？</h3>
+              <div class="count_form">
                 <form action="">
                   <div class="flex-form form_grid">
                     <div class="form_grp">
-                      <div class="form_content form_inline">
-                        <div><label for="">半尖峰比例</label> <input name="" type="text" placeholder=""> ％ </div>
-                        <span>+</span>
-                        <div><label for="">離峰比例</label> <input name="" type="text" placeholder=""> ％ </div>
-                        <span>= 100%</span>
+                      <label for="username" class="form_title">週日待在家？</label>
+                      <div class="form_content">
+                        <label>
+                          <input name="radioSample" type="radio" value="" class="b_yes" checked="">
+                        </label>
+                        <label>
+                          <input name="radioSample" type="radio" value="" class="b_no">
+                        </label>
                       </div>
                     </div>
-                    <div class="count_hint">* 以上2個比例合計應等於100%</div>
-                    <div class="btn_grp form_inline line">
-                      <button class="btn btn-submit">計算結果</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="count_block">
+              <h3 class="count_title"><span>4</span>通常在哪些時段使用…</h3>
+              <div class="count_form">
+                <form action="">
+                  <div class="flex-form form_grid">
+                    <div class="count_hint left">請選擇電器項目，並填寫使用數據及時間。</div>
+                    <div class="form_grp">
+                      <label>
+                        <input name="radioSample" type="radio" value="" class="b_yes" checked="">
+                      </label>
+                      <label>
+                        <input name="radioSample" type="radio" value="" class="b_no">
+                      </label>
                     </div>
                   </div>
                 </form>

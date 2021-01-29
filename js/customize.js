@@ -89,7 +89,7 @@ $(function() {
         slidesToShow: 1,
         slidesToScroll: 1,
         // autoplay: true,
-        centerMode: true,
+        centerMode: false,
         centerPadding: '0px',
         arrow: true,
         lazyLoaded: true,
@@ -98,7 +98,7 @@ $(function() {
         responsive: [{
             breakpoint: 1000,
             settings: {
-                centerMode: true,
+                centerMode: false,
                 centerPadding: '0px',
                 slidesToShow: 4,
                 slidesToScroll: 1,
@@ -107,16 +107,16 @@ $(function() {
         },{
             breakpoint: 768,
             settings: {
-                centerMode: true,
+                centerMode: false,
                 centerPadding: '0px',
-                slidesToShow: 3,
+                slidesToShow: 2,
                 slidesToScroll: 1,
                 arrows: true
             }
         },{
             breakpoint: 640,
             settings: {
-                centerMode: true,
+                centerMode: false,
                 slidesToShow: 2,
                 slidesToScroll: 1,
                 arrows: true
