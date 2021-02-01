@@ -169,7 +169,6 @@ footer {
     .fb{
       color: #fff;
       margin-bottom: 18px;
-
       @include screen('mobile') {
         margin-bottom: 0;
       }
@@ -188,6 +187,13 @@ footer {
           border-radius:50%;
           vertical-align: middle;
           margin-right: 8px;
+        }
+        &:first-child{
+          a{
+            background:transparent url(../images/bill.png) no-repeat center center;
+            background-size: 42px;
+            border:0;
+          }
         }
         &:hover,&:focus{
           a{

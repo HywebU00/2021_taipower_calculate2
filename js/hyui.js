@@ -506,7 +506,7 @@ $(function() {
     });
 
     function tabSet() {
-      $('.price_block .tabs').each(function() {
+      $('.count_block .tabs').each(function() {
         var _tab = $(this),
         _tabItem = _tab.find('.tabItem'),
         _tabItemA = _tabItem.children('a'),
@@ -538,7 +538,7 @@ $(function() {
         }
       });
     }
-    $('.price_block .tabs>.tabItem:first-child>a').trigger('click');
+    $('.count_block .tabs>.tabItem:first-child>a').trigger('click');
     tabSet();
     /*-----------------------------------*/
     ///////////////置頂go to top////////////
