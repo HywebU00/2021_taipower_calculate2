@@ -328,8 +328,8 @@ h3.title2{
         flex-basis: 100%;
         width: 100%;
       }
-      input[type="text"]{
-        line-height: 30px;
+      input[type="text"],input[type="number"]{
+        line-height: 24px;
         border: 1px solid #e9ddbf;
         margin: 0;
         width: 80%;
@@ -438,7 +438,7 @@ h3.title2{
           margin-bottom: .3em;
         }
       }
-      input[type="text"]{
+      input[type="text"],input[type="number"]{
         max-width: 80px;
         margin-right: .3em;
         margin-bottom: 0;

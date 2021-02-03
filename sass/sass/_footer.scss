@@ -188,16 +188,22 @@ footer {
           vertical-align: middle;
           margin-right: 8px;
         }
+        &:hover,&:focus{
+          a{
+            background:$lightColor url(../images/basic/icon_fb.png) no-repeat center center;
+          }
+        }
         &:first-child{
           a{
             background:transparent url(../images/bill.png) no-repeat center center;
             background-size: 42px;
             border:0;
           }
-        }
-        &:hover,&:focus{
-          a{
-            background:$lightColor url(../images/basic/icon_fb.png) no-repeat center center;
+          &:hover,&:focus{
+            a{
+              background:$lightColor url(../images/bill.png) no-repeat center center;
+              background-size: 42px;
+            }
           }
         }
       }
