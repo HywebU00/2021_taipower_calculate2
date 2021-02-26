@@ -285,6 +285,7 @@
 					margin-top: 4px;
 					border-radius: 4px 4px 0 0;
 					text-align: center;
+					font-size: 1.25rem;
 				}
 				.price_table{
 					display: block;
@@ -485,10 +486,10 @@
 					}
 					a{
 						display: block;
-						background: #fff url(../images/mp/case_bg2.jpg) no-repeat center 0;
+						background: #fff url(../images/mp/case_bg2.jpg) no-repeat center bottom;
 						background-size: 100%;
 						border-radius: 6px;
-						padding: 75px 20px 20px 20px;
+						padding: 20px 20px 75px 20px;
 						box-shadow: 0 0 5px rgba(53,54,51,0.1);
 						height: 100%;
 						transform-origin: 0 100%;
@@ -553,6 +554,11 @@
 							@include screen('tablet') {
 								transform: scale(1);
 							}
+						}
+					}
+					&:nth-child(2n){
+						a{
+							background: #fff url(../images/mp/case_bg4.jpg) no-repeat center bottom;
 						}
 					}
 				}
