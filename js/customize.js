@@ -240,3 +240,39 @@ $(function() {
     });
      
  });
+$(function(){
+  $(".message_link").click(function(e) {
+    $(".message_box").fadeIn(1200, 'easeOutExpo');
+    $('body').prepend('<div class="bodyoverlay"></div>').addClass('noscroll');
+    e.preventDefault();
+});
+  $(".message_box .close").click(function(e) {
+    $(".bodyoverlay").remove();
+    $(".message_box").fadeOut(500, 'easeOutExpo');
+    $('body').removeClass('noscroll');
+    e.preventDefault();
+});
+  $('body').on('click','.bodyoverlay',function(){
+    $(".bodyoverlay").remove();
+    $(".message_box").fadeOut(500, 'easeOutExpo');
+    $('body').removeClass('noscroll');
+});
+});
+$(function(){
+  $(".case_link").click(function(e) {
+    $(".case_box").fadeIn(1200, 'easeOutExpo');
+    $('body').prepend('<div class="bodyoverlay"></div>').addClass('noscroll');
+    e.preventDefault();
+});
+  $(".case_box .close").click(function(e) {
+    $(".bodyoverlay").remove();
+    $(".case_box").fadeOut(500, 'easeOutExpo');
+    $('body').removeClass('noscroll');
+    e.preventDefault();
+});
+  $('body').on('click','.bodyoverlay',function(){
+    $(".bodyoverlay").remove();
+    $(".case_box").fadeOut(500, 'easeOutExpo');
+    $('body').removeClass('noscroll');
+});
+});

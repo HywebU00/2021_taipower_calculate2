@@ -5,7 +5,7 @@ html {
   scroll-behavior: smooth;
 }
 body {
-  background: #e5f1f0;
+  background: #e5f1f0 url(../images/bg.png) repeat center 0;
   &.noscroll {
     position: static !important;
     width: 100%;
@@ -14,6 +14,15 @@ body {
     overflow-y: hidden !important;
     margin: 0;
     padding: 0;
+  }
+  .bodyoverlay{
+    content: "";
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,.7);
+    display: block;
+    z-index: 999;
+    position: fixed;
   }
 }
 // 最外圍預設為100%
@@ -270,6 +279,16 @@ h3.title2{
       font-style: italic;
       font-weight: normal;
       margin-right: 8px;
+    }
+    a{
+      font-size: 1rem;
+      color: #222;
+      text-decoration: underline;
+      margin-left: 1rem;
+      &:hover,&:focus{
+        text-decoration: none;
+        color: $fourColor;
+      }
     }
   }
   .count_form{
